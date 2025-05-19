@@ -3,6 +3,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
+// Dados dos cards
 const cards = [
   {
     title: 'Gerenciamento de redes sociais',
@@ -31,6 +32,32 @@ const cards = [
   },
 ]
 
+// Componente individual do card
+function ServiceCard({ card, index }: { card: (typeof cards)[0]; index: number }) {
+  const cardRef = useRef(null)
+  const isCardInView = useInView(cardRef, { once: true, amount: 0.2 })
+
+  return (
+    <motion.div
+      ref={cardRef}
+      initial={{ scale: 0.8, opacity: 0 }}
+      animate={isCardInView ? { scale: 1, opacity: 1 } : {}}
+      transition={{
+        delay: 0.2 + index * 0.2,
+        duration: 0.4,
+        type: 'spring',
+        stiffness: 200,
+      }}
+      className="bg-white text-[#0D2C7C] rounded-xl shadow-[6px_6px_0px_0px_#001A5C] p-8 flex flex-col items-center text-center h-[240px] w-[85%] md:w-[60%] lg:w-[30%] lg:h-[270px] xl:w-[25%] xl:h-[250px]"
+    >
+      <img src={card.icon} alt={card.title} className="w-10 h-10 mb-6" />
+      <h3 className="font-bold text-xl mb-3">{card.title}</h3>
+      <p className="text-base">{card.description}</p>
+    </motion.div>
+  )
+}
+
+// Componente principal
 export default function WhatWeDo() {
   const titleRef = useRef(null)
   const isTitleInView = useInView(titleRef, { once: true, amount: 0.3 })
@@ -58,30 +85,9 @@ export default function WhatWeDo() {
 
         {/* Cards */}
         <div className="flex flex-wrap justify-center gap-10 w-screen px-0 lg:px-[5%] pb-0 sm:pb-20">
-          {cards.map((card, index) => {
-            const cardRef = useRef(null)
-            const isCardInView = useInView(cardRef, { once: true, amount: 0.2 })
-
-            return (
-              <motion.div
-                key={card.title}
-                ref={cardRef}
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={isCardInView ? { scale: 1, opacity: 1 } : {}}
-                transition={{
-                  delay: 0.2 + index * 0.2,
-                  duration: 0.4,
-                  type: 'spring',
-                  stiffness: 200,
-                }}
-                className="bg-white text-[#0D2C7C] rounded-xl shadow-[6px_6px_0px_0px_#001A5C] p-8 flex flex-col items-center text-center h-[240px] w-[85%] md:w-[60%] lg:w-[30%] lg:h-[270px] xl:w-[25%] xl:h-[250px]"
-              >
-                <img src={card.icon} alt={card.title} className="w-10 h-10 mb-6" />
-                <h3 className="font-bold text-xl mb-3">{card.title}</h3>
-                <p className="text-base">{card.description}</p>
-              </motion.div>
-            )
-          })}
+          {cards.map((card, index) => (
+            <ServiceCard key={card.title} card={card} index={index} />
+          ))}
         </div>
 
         {/* Segunda parte */}
