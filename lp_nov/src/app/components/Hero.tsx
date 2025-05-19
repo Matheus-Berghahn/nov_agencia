@@ -23,7 +23,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 1 }}
-        className="w-[70vw] sm:w-[50vw] md:w-[35vw] lg:w-[40vw] xl:w-[35vw] mb-12 md:mb-16"
+        className="w-[70vw] sm:w-[50vw] md:w-[35vw] lg:w-[40vw] xl:w-[35vw] mb-12 md:mb-16 pt-0 2xl:pt-5"
       />
 
       {/* Texto principal */}
