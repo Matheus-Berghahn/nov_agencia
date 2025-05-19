@@ -18,7 +18,7 @@ export default function BoxParallax() {
   return (
     <div
       ref={ref}
-      className="relative h-[35vh] md:h-[60vh] bg-[url('/bg-parallax.jpg')] bg-cover bg-center bg-fixed flex items-center justify-center px-8"
+      className="relative h-[35vh] md:h-[60vh] bg-[url('/bg-parallax.jpg')] bg-cover bg-center bg-scroll md:bg-fixed flex items-center justify-center px-8"
     >
       {/* Bolinhas animadas */}
       <div className="absolute top-8 left-8 md:top-16 md:left-16 flex gap-2">

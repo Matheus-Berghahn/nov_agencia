@@ -84,7 +84,7 @@ export default function Hero() {
             className="px-6 py-3 font-semibold rounded-full text-[clamp(0.9rem,2vw,1rem)] cursor-pointer"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
-            transition={{ delay: 2.3, duration: 0.5 }}
+            transition={{ delay: 2.6, duration: 0.5 }}
           >
             Bora conversar!
           </motion.button>

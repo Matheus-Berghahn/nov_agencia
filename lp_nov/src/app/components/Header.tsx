@@ -30,7 +30,7 @@ export default function Header() {
 
   const navItemClasses = (isScrolled: boolean) =>
     `group relative cursor-pointer transition-colors duration-300 ${
-      isScrolled ? 'text-[#0D2C7C]' : 'text-white'
+      isScrolled ? 'text-[#0D2C7C] pt-0' : 'text-white pt-5'
     } hover:opacity-80`
 
   const underlineClasses = scrolled
@@ -51,7 +51,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-12 text-sm sm:text-base font-medium transition-colors duration-300">
+        <nav className="hidden md:flex gap-12 text-sm sm:text-base font-medium transition-colors duration-300 ">
           <div
             className={navItemClasses(scrolled)}
             onClick={() => scrollToId('about')}

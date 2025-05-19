@@ -8,25 +8,23 @@ import logo from '../../../public/logo_azul.png'
 export default function Footer() {
   return (
     <footer className="relative bg-white w-full py-10 sm:py-16 px-6 flex flex-col items-center justify-center overflow-hidden">
-      <div className="relative flex flex-col-reverse sm:flex-row items-center justify-center gap-0 lg:gap-10 max-w-7xl">
+      <div className="relative flex flex-col-reverse sm:flex-row items-center justify-center gap-0 lg:gap-10 max-w-7xl ">
 
-        {/* Máscara invisível para o CTA */}
-        <div className="relavite sm:absolute sm:top-3/6 md:top-3/6 lg:top-3/5 right-5 w-[90%] overflow-x-hidden mt-6 flex items-center justify-end  cursor-pointer">
+        {/* CTA com animação forçada */}
+        <div className="relative sm:absolute sm:top-3/6 md:top-3/6 lg:top-3/5 right-0 sm:right-5 w-[90%] overflow-x-hidden mt-6 flex items-center justify-center sm:justify-end cursor-pointer">
           <motion.div
             initial={{ x: -800 }}
-            whileInView={{ x: 0 }}
+            animate={{ x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="w-full rounded-full bg-[#002D9B] py-5 sm:py-10 px-8 sm:px-4  relative cursor-pointer z-20 hover:bg-[#EF7714] "
+            className="w-full rounded-full bg-[#002D9B] py-5 sm:py-10 px-8 sm:px-4 relative cursor-pointer z-20 hover:bg-[#EF7714]"
           >
             <motion.a
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 1.2 }}
-              viewport={{ once: true }}
               href="https://wa.me/555193318332"
-              target="_blank"  
-              rel="noopener noreferrer" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="block text-white text-lg sm:text-xl md:text-2xl lg:text-4xl font-bold text-center sm:text-right pr-0 sm:pr-16 cursor-pointer"
             >
               Bora conversar no Whats!
@@ -34,11 +32,12 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        <div className="relative z-30 w-[200px] sm:w-[450px] md:w-[500px] pl">
+        {/* Imagem do celular */}
+        <div className="relative z-30 w-[200px] sm:w-[450px] md:w-[500px]">
           <Image src={celular} alt="Celular" className="w-full h-auto" />
         </div>
 
-        {/* Texto como um bloco só, com animação alpha */}
+        {/* Texto animado */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -52,6 +51,7 @@ export default function Footer() {
         </motion.div>
       </div>
 
+      {/* Logo no rodapé */}
       <div className="mt-16">
         <Image src={logo} alt="Logo NOV Agência" className="w-40 h-auto" />
       </div>
