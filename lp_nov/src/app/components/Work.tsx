@@ -30,7 +30,7 @@ const Work = () => {
 
   return (
     <section
-      ref={ref}
+      
       id="work"
       className=" overflow-x-hidden xl:overflow-x-visible relative w-full flex flex-col xl:flex-row items-center justify-center md:justify-between px-8 sm:px-16 md:px-0 lg:px-20 2xl:px-40 py-20 xl:py-28 2xl:py-60 gap-12"
     >
@@ -48,7 +48,9 @@ const Work = () => {
           vira quase da família:
         </motion.div>
 
-        <div className="space-y-6 w-full lg:w-full 2xl:w-full pl-0 md:pl-10 xl:pl-0">
+        <div 
+        ref={ref}
+        className="space-y-6 w-full lg:w-full 2xl:w-full pl-0 md:pl-10 xl:pl-0">
           {textItems.map((item, index) => (
             <motion.div
               key={index}

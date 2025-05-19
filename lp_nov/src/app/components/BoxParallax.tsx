@@ -17,7 +17,7 @@ export default function BoxParallax() {
 
   return (
     <div
-      ref={ref}
+      
       className="relative h-[35vh] md:h-[60vh] bg-[url('/bg-parallax.jpg')] bg-cover bg-center bg-scroll md:bg-fixed flex items-center justify-center px-8"
     >
       {/* Bolinhas animadas */}
@@ -45,7 +45,9 @@ export default function BoxParallax() {
       </div>
 
       {/* Texto com animação de baixo pra cima */}
-      <div className="text-white text-center space-y-2">
+      <div 
+      ref={ref}
+      className="text-white text-center space-y-2">
         <motion.h2
           className="text-xl sm:text-4xl lg:text-6xl xl:text-7xl 2xl:text-7xl font-light pb-[1%] md:pb-[2%]"
           initial={{ opacity: 0, y: 50 }}
