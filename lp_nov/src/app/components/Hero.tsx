@@ -51,7 +51,7 @@ export default function Hero() {
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ delay: 1.6, duration: 0.5 }}
       >
-        A gente não quer só likes. Criamos conteúdo que emociona, conecta, representa e, de preferência, arranca um 'meu Deus, sou eu nesse post!
+        A gente não quer só likes. Criamos conteúdo que emociona, conecta, representa e, de preferência, arranca um meu Deus, sou eu nesse post!
       </motion.p>
 
       <a
