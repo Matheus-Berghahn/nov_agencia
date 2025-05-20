@@ -11,8 +11,8 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "AGENCIA_NOV",
-  description: "AGENCIA_NOV",
-  icons: "/logo_azul.png",
+  description: "AGENCIA NOV",
+  icons: "/favicon.png",
 };
 
 export default function RootLayout({
