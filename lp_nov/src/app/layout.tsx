@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "AGENCIA_NOV",
+  title: "AGENCIA NOV",
   description: "AGENCIA NOV",
   icons: "/favicon.png",
 };
