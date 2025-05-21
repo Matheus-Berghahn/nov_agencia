@@ -26,8 +26,8 @@ const cards = [
     icon: '/icon_card_04.svg',
   },
   {
-    title: 'Campanhas e artes',
-    description: 'Estamos sempre online. Sério. Às vezes até demais.',
+    title: 'Artes e criativos',
+    description: 'Do PDF ao Outdoor: tudo com a cara da sua marca e intenção por trás de cada detalhe.',
     icon: '/icon_card_05.svg',
   },
 ]
